@@ -1,0 +1,32 @@
+package ejerciciosArray;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ej01 {
+	
+	static Scanner scan = new Scanner(System.in);
+	static List<Integer> numerosList = new ArrayList<Integer>();
+	
+	public static void main(String[] args) {
+		ej01();
+	}
+	
+	/*====================EJ01====================*/
+	public static void ej01(){
+		for(int i = 0; i < 7; i++) {
+			System.out.println("Escribe un número: [nº" + (i+1) + "]:");
+			int num = scan.nextInt();
+			numerosList.add(num);
+		}
+		System.out.println("\n");
+		impirmirArray();
+	}/*Fin pedir numeros*/
+	
+	public static void impirmirArray() {
+		for( int h : numerosList) {
+			System.out.println(h);
+		}
+	}/*Fin imprimir array*/
+}

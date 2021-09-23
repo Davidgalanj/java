@@ -1,0 +1,43 @@
+package ejerciciosArray;
+
+import java.util.Scanner;
+
+public class ej05 {
+	static Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		ej05();
+	}
+	
+	public static void ej05() {
+        int numAlum;
+        double suma = 0, media;
+
+        do {
+            System.out.print("Número de alumnos de la clase: ");
+            numAlum = scan.nextInt();
+        } while (numAlum <= 0);
+
+        double[] notas = new double[numAlum]; 
+        
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("\nAlumno " + (i + 1) + " Nota final: ");
+            notas[i] = scan.nextDouble();
+        }
+
+        for (int i = 0; i < notas.length; i++) {
+            suma = suma + notas[i];
+        }
+
+        media = suma / notas.length;
+
+        System.out.printf("Nota media del curso: %.2f %n", media);
+
+        System.out.println("\nListado de notas superiores a la media: ");
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                System.out.println("Alumno numero " + (i + 1)+ " Nota final: " + notas[i]);
+            }
+        }
+    }	
+}

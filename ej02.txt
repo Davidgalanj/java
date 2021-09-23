@@ -1,0 +1,33 @@
+package ejerciciosArray;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ej02 {
+
+	static Scanner scan = new Scanner(System.in);
+	static List<Integer> numerosList = new ArrayList<Integer>();
+	
+	public static void main(String[] args) {
+		ej02();
+	}
+	
+	/*====================EJ02====================*/
+	public static void ej02(){
+		for(int i = 0; i < 7; i++) {
+			System.out.println("Escribe un número: [nº" + (i+1) + "]:");
+			int num = scan.nextInt();
+			numerosList.add(num);
+		}
+		System.out.println("\n");
+		impirmirArrayInverso();
+	}/*Fin pedir numeros*/
+	
+	public static void impirmirArrayInverso() {
+		
+		for(int i = numerosList.size() - 1; i >= 0; i--) {
+			System.out.println(numerosList.get(i));
+		}
+	}/*Fin imprimir array inverso*/
+}

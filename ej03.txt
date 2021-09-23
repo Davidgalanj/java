@@ -1,0 +1,34 @@
+package ejerciciosArray;
+
+import java.util.Scanner;
+
+public class ej03 {
+	
+	static Scanner scan = new Scanner(System.in);
+	static int numerosListA[] = new int[10];
+
+	public static void main(String[] args) {
+		ej03();
+	}
+	
+	
+	/*====================EJ03====================*/	
+	public static void ej03() {
+		for (int i=0;i<10;i++){
+			System.out.println("Escribe un número: [nº" + (i+1) + "]:");
+			numerosListA[i] = scan.nextInt();
+		}
+		
+		imprimirArrayEj03();
+	}
+
+	
+	public static void imprimirArrayEj03() {
+		for (int i=0;i<=4;i++){
+		System.out.println (numerosListA[i]); 
+		System.out.println(numerosListA[9-i]);
+		}
+	}
+	
+	
+}

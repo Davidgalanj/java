@@ -1,0 +1,48 @@
+package ej07;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ej07 {
+	static Scanner scan = new Scanner(System.in);
+	static HashMap <String, String> paisCapital = new HashMap<String, String>();
+	
+	public static void main(String[] args) {
+		pedirPaisesCapitales();
+		leerPaisesCapitales();
+	}
+	
+	public static void pedirPaisesCapitales() {
+		String pais, capital;
+		//Hacemos un bucle para que nos pida 5 paises
+		for(int i = 0; i < 5; i++) {
+			System.out.println("Escribe el país número " + (i+1) + ":");
+			pais = scan.nextLine();
+			System.out.println("Escribe su capital:");
+			capital = scan.nextLine();
+
+			paisCapital.put(pais, capital);
+		}
+	}
+	
+	public static void leerPaisesCapitales() {
+		System.out.println(paisCapital);
+		pedirClave();
+	}
+	
+	public static void pedirClave() {
+		String opcion = "";
+		
+		do{
+			System.out.println("Escribe una pais para buscar su capital:");
+			opcion = scan.nextLine();
+			buscarPorClave(opcion);
+		}while(opcion != "0");
+	}
+	
+	public static void buscarPorClave(String opcion) {
+		System.out.println(paisCapital.get(opcion));
+	}
+	
+	
+}

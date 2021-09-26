@@ -1,34 +1,15 @@
-package ejerciciosArray;
+package ej03;
 
-import java.util.Scanner;
+import java.time.LocalDate;
+import static java.time.temporal.ChronoUnit.DAYS;
 
 public class ej03 {
-	
-	static Scanner scan = new Scanner(System.in);
-	static int numerosListA[] = new int[10];
+
+	static LocalDate fecha_nac = LocalDate.of(1998, 07, 22);
+	static LocalDate fecha_hoy = LocalDate.now();
 
 	public static void main(String[] args) {
-		ej03();
-	}
-	
-	
-	/*====================EJ03====================*/	
-	public static void ej03() {
-		for (int i=0;i<10;i++){
-			System.out.println("Escribe un número: [nº" + (i+1) + "]:");
-			numerosListA[i] = scan.nextInt();
-		}
-		
-		imprimirArrayEj03();
-	}
-
-	
-	public static void imprimirArrayEj03() {
-		for (int i=0;i<=4;i++){
-		System.out.println (numerosListA[i]); 
-		System.out.println(numerosListA[9-i]);
-		}
-	}
-	
-	
+		long dias = DAYS.between(fecha_nac, fecha_hoy);
+		System.out.println("Desde la fecha " + fecha_nac.toString() + " hasta la fecha " + fecha_hoy.toString() + " hay: " + dias + " días");		
+	}	
 }

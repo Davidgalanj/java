@@ -1,0 +1,74 @@
+package ej04;
+
+public class object {
+
+	/*
+	 * Se crean los diferentes atributos de la clase, se crean en privado para que solamente se pueda
+	 * acceder a ellos desde la clase o desde el metodo get/set.
+	*/
+	private String atributo1;
+	private String atributo2;
+	private int atributo3;
+	
+	/*Esto es el constructor, en este caso he creado tanto uno vacio como uno vacio para que se 
+	 * vea la diferencia y para poder crear un objeto sin atributos.
+	 */
+	public object() {
+		super();
+	}
+	
+	/*Esto es el constructor con los atributos que tiene pasados como parametros para a la hora de 
+	 * crear el objeto desde otra clase, tener que añadirle sus respectivos atributos.
+	 * Para refererinos al atributo de la clase utilizamos el (.this). 
+	*/
+	public object(String atributo1, String atributo2, int atributo3) {
+		super();
+		this.atributo1 = atributo1;
+		this.atributo2 = atributo2;
+		this.atributo3 = atributo3;
+	}
+
+	/*
+	 * Generamos los getters y los setters para poder acceder o modificar a los atributos del objeto
+	 * desde otra clase en cualquier momento.
+	 */
+	public String getAtributo1() {
+		return atributo1;
+	}
+
+	public void setAtributo1(String atributo1) {
+		this.atributo1 = atributo1;
+	}
+
+	public String getAtributo2() {
+		return atributo2;
+	}
+
+	public void setAtributo2(String atributo2) {
+		this.atributo2 = atributo2;
+	}
+
+	public int getAtributo3() {
+		return atributo3;
+	}
+
+	public void setAtributo3(int atributo3) {
+		this.atributo3 = atributo3;
+	}
+
+	/*Este metodo te devuelve en forma de cadena de caracteres todos los atributos de la clase*/
+	@Override
+	public String toString() {
+		return "object [atributo1=" + atributo1 + ", atributo2=" + atributo2 + ", atributo3=" + atributo3 + "]";
+	}
+	
+	/*En esta clase puedes incluir más metodos las cuales puedes llamar desde cualquier otra clase.
+	 * Los metodos incluidos son al gusto, desde un toString hasta un obtenerAtributo1() */
+	
+	
+	
+	
+	
+	
+	
+}

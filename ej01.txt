@@ -1,32 +1,21 @@
-package ejerciciosArray;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package ej01;
 
 public class ej01 {
 	
-	static Scanner scan = new Scanner(System.in);
-	static List<Integer> numerosList = new ArrayList<Integer>();
+	static int num_f = 0;
+	static int num = 8;
 	
 	public static void main(String[] args) {
-		ej01();
+		funcRecursiva();
+		System.out.println("Numero final:" + num_f);
 	}
 	
-	/*====================EJ01====================*/
-	public static void ej01(){
-		for(int i = 0; i < 7; i++) {
-			System.out.println("Escribe un número: [nº" + (i+1) + "]:");
-			int num = scan.nextInt();
-			numerosList.add(num);
+	public static void funcRecursiva(){
+		if(num < 15) {
+			num_f += num;
+			num++;
+			funcRecursiva();
 		}
-		System.out.println("\n");
-		impirmirArray();
-	}/*Fin pedir numeros*/
-	
-	public static void impirmirArray() {
-		for( int h : numerosList) {
-			System.out.println(h);
-		}
-	}/*Fin imprimir array*/
+	}
+
 }
